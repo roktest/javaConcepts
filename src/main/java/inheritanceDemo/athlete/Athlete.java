@@ -26,4 +26,17 @@ public class Athlete {
         System.out.println("Last Team " + team);
         System.out.println("Games played " + gamesPlayed);
     }
+
+    public void playGame(){
+        System.out.println(name + " started a game.");
+        gamesPlayed++;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
 }

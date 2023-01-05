@@ -53,7 +53,7 @@ public class Car {
 
     public void getDescription(){
         System.out.println("A " + color + " " + carName);
-        System.out.println("Price $Arg" + price + "-");
+        System.out.println("Price USD$" + price + "-");
         System.out.println("Mileage " + mileage + "km");
         System.out.println("Is the car damaged? " + isDamaged);
         System.out.println("Registration number " + registrationNumber);
@@ -69,5 +69,25 @@ public class Car {
         System.out.println("Number of seats " + numberOfSeats);
         System.out.println("Number of doors " + numberOfDoors);
         //System.out.println("" ++ "");
+    }
+
+    public String getCarName() {
+        return carName;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public void setPrice(int price) {
+        this.price = Math.abs(price);
+    }
+
+    public void drive(int mileage){
+        this.mileage = this.mileage + Math.abs(mileage);
     }
 }
