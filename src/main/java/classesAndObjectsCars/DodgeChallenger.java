@@ -1,4 +1,4 @@
-package classesAndObjects;
+package classesAndObjectsCars;
 
 import java.util.Random;
 
