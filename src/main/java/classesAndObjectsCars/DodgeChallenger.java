@@ -4,33 +4,34 @@ import java.util.Random;
 
 public class DodgeChallenger {
 
-    byte numberOfSeats = 5;
-    byte numberOfDoors = 3;
-    byte numberOfVehicleOwners = 1;
-    byte emissionSticker = 4;
+    //to stop other classes to overwrite use private
+    private byte numberOfSeats = 5;
+    private byte numberOfDoors = 3;
+    private byte numberOfVehicleOwners = 1;
+    private byte emissionSticker = 4;
 
-    short power = 362;
-    short horsePower = 492;
-    short co2Emission = 333;
-    short cubicCapacity = 6417;
+    private short power = 362;
+    private short horsePower = 492;
+    private short co2Emission = 333;
+    private short cubicCapacity = 6417;
 
-    int price = 4500000;
-    int mileage = 150000;
+    private int price = 4500000;
+    private int mileage = 150000;
 
-    long registrationNumber = 6528461382356028L;
+    private long registrationNumber = 6528461382356028L;
 
-    float fuelConsumptionCombined = 15.5F;
-    float fuelConsumptionUrban = 21.4F;
-    float fuelConsumptionExtraUrban = 13.6F;
+    private float fuelConsumptionCombined = 15.5F;
+    private float fuelConsumptionUrban = 21.4F;
+    private float fuelConsumptionExtraUrban = 13.6F;
 
-    double fuelConsumptionPreciseAverage = 153.187526812681E-1;
+    private double fuelConsumptionPreciseAverage = 153.187526812681E-1;
 
-    boolean isDamaged = true;
-    char energyEfficiencyCategory = 'G';
+    private boolean isDamaged = true;
+    private char energyEfficiencyCategory = 'G';
 
     String color;
 
-    DodgeChallenger(byte numberOfVehicleOwners, short power, short horsePower, short cubicCapacity, int price, int mileage, boolean isDamaged, String color){
+    public DodgeChallenger(byte numberOfVehicleOwners, short power, short horsePower, short cubicCapacity, int price, int mileage, boolean isDamaged, String color){
         Random randomLongNumber = new Random();
         this.numberOfVehicleOwners = numberOfVehicleOwners;
         this.power = power;

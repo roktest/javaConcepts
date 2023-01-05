@@ -17,7 +17,7 @@ public class BasketApp {
         basketBallPlayers[3] = magic;
 
         for (BasketBallPlayer basketBallPlayer : basketBallPlayers){
-            System.out.println(basketBallPlayer.name);
+            // System.out.println(basketBallPlayer.name); // won't be allowed once the variables of the class are private
             basketBallPlayer.freeThrow();
             System.out.println();
         }

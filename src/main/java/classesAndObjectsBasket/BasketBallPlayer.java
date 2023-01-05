@@ -4,14 +4,15 @@ import java.util.Random;
 
 public class BasketBallPlayer {
 
-    String name;
-    String nickName;
-    int yearOfBirth;
-    String team;
+    //to stop other classes to overwrite use private
+    private String name;
+    private String nickName;
+    private int yearOfBirth;
+    private String team;
 
-    double freeThrowPercentage;
-    double pointsPerGame;
-    int gamesPlayed;
+    private double freeThrowPercentage;
+    private double pointsPerGame;
+    private int gamesPlayed;
 
     public BasketBallPlayer(String name, String nickName, int yearOfBirth, String team, double freeThrowPercentage, double pointsPerGame, int gamesPlayed) {
         this.name = name;
