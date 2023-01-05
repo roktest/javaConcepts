@@ -30,10 +30,6 @@ public class DodgeChallenger {
 
     String color;
 
-    DodgeChallenger(){
-        System.out.println("Generic Dodge Challenger created");
-    }
-
     DodgeChallenger(byte numberOfVehicleOwners, short power, short horsePower, short cubicCapacity, int price, int mileage, boolean isDamaged, String color){
         Random randomLongNumber = new Random();
         this.numberOfVehicleOwners = numberOfVehicleOwners;
@@ -42,7 +38,7 @@ public class DodgeChallenger {
         this.cubicCapacity = cubicCapacity;
         this.price = price;
         this.mileage = mileage;
-        this.registrationNumber = randomLongNumber.nextLong(); // TODO: fix this, as it can return negative long numbers
+        this.registrationNumber = randomLongNumber.nextLong(Long.MAX_VALUE) + 1; // https://stackoverflow.com/questions/5827023/java-random-giving-negative-numbers
         this.isDamaged = isDamaged;
         this.color = color;
         System.out.println("A " + color + " Dodge Challenger created");
