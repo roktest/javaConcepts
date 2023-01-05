@@ -1,5 +1,7 @@
 package classesAndObjects;
 
+import java.util.Random;
+
 public class DodgeChallenger {
 
     byte numberOfSeats = 5;
@@ -26,8 +28,48 @@ public class DodgeChallenger {
     boolean isDamaged = true;
     char energyEfficiencyCategory = 'G';
 
+    String color;
+
+    DodgeChallenger(){
+        System.out.println("Generic Dodge Challenger created");
+    }
+
+    DodgeChallenger(byte numberOfVehicleOwners, short power, short horsePower, short cubicCapacity, int price, int mileage, boolean isDamaged, String color){
+        Random randomLongNumber = new Random();
+        this.numberOfVehicleOwners = numberOfVehicleOwners;
+        this.power = power;
+        this.horsePower = horsePower;
+        this.cubicCapacity = cubicCapacity;
+        this.price = price;
+        this.mileage = mileage;
+        this.registrationNumber = randomLongNumber.nextLong(); // TODO: fix this, as it can return negative long numbers
+        this.isDamaged = isDamaged;
+        this.color = color;
+        System.out.println("A " + color + " Dodge Challenger created");
+    }
 
     public void startEngine(){
         System.out.println("engine started");
+    }
+
+    public void getDescription(){
+        System.out.println("2018 Dodge Challenger SRT 392");
+        System.out.println("Price $Arg" + price + "-");
+        System.out.println("Mileage " + mileage + "km");
+        System.out.println("Is the car damaged? " + isDamaged);
+        System.out.println("Registration number " + registrationNumber);
+        System.out.println("Cubic capacity " + cubicCapacity + "cc");
+        System.out.println("Power " + power + "KW("+ horsePower +"hp)");
+        System.out.println("CO2 Emission " + co2Emission + "g/km");
+        System.out.println("Emission sticker " + emissionSticker + "(Energy efficiency " + energyEfficiencyCategory + ")");
+        System.out.println("Combined fuel consumption " + fuelConsumptionCombined + "l/100k");
+        System.out.println("Urban fuel consumption " + fuelConsumptionUrban + "l/100k");
+        System.out.println("Extra Urban fuel consumption " + fuelConsumptionExtraUrban + "l/100k");
+        System.out.println("Precise Combined fuel consumption " + fuelConsumptionPreciseAverage + "l/100k");
+        System.out.println("Number of previous owners " + numberOfVehicleOwners);
+        System.out.println("Number of seats " + numberOfSeats);
+        System.out.println("Number of doors " + numberOfDoors);
+        System.out.println("Color " + color);
+        //System.out.println("" ++ "");
     }
 }
