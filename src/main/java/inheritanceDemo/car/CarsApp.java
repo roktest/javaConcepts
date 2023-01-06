@@ -37,7 +37,7 @@ public class CarsApp {
         System.out.println( blackToyotaSupra.getMileage()+ "km " + blackToyotaSupra.getCarName() + "'s price is USD$" + blackToyotaSupra.getPrice() + "-");
         blackToyotaSupra.startElectricEcoEngine();
         blackToyotaSupra.startEngine();
-        blackToyotaSupra.drive(1000);
+        blackToyotaSupra.drive(1000.624); // overloading method drive
         blackToyotaSupra.setPrice(150000);
         System.out.println( blackToyotaSupra.getMileage()+ "km " + blackToyotaSupra.getCarName() + "'s price is USD$" + blackToyotaSupra.getPrice() + "-");
         blackToyotaSupra.getDescription();

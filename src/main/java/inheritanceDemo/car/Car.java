@@ -90,4 +90,9 @@ public abstract class Car {
     public void drive(int mileage){
         this.mileage = this.mileage + Math.abs(mileage);
     }
+
+    public void drive(double mileage){
+        int roundedMileageNumber = (int) Math.round(mileage);
+        this.mileage += Math.abs(roundedMileageNumber);
+    }
 }
