@@ -11,8 +11,12 @@ public class CarsApp {
         System.out.println(whiteDodgeChallenger.getCarName() + "'s price is USD$" + whiteDodgeChallenger.getPrice() + "-");
         whiteDodgeChallenger.getDescription();
         whiteDodgeChallenger.startEngine();
+        whiteDodgeChallenger.startElectricEcoEngine();
         System.out.println("----------------------------------------------");
-        System.out.println("//////////////////////////////////////////////");
+
+
+
+
         System.out.println("----------------------------------------------");
         // we need to cast the arguments
         DodgeChallenger blackDodgeChallenger = new DodgeChallenger((byte) 1, (short) 492, (short) 592, (short) 5700, 8500000, 0, false, "black");
@@ -20,20 +24,30 @@ public class CarsApp {
         System.out.println(blackDodgeChallenger.getCarName() + "'s price is USD$" + blackDodgeChallenger.getPrice() + "-");
         blackDodgeChallenger.getDescription();
         blackDodgeChallenger.startEngine();
+        blackDodgeChallenger.startElectricEcoEngine();
         System.out.println("----------------------------------------------");
-        System.out.println("//////////////////////////////////////////////");
+
+
+
+
         System.out.println("----------------------------------------------");
         // we need to cast the arguments
         ToyotaSupra blackToyotaSupra = new ToyotaSupra((byte) 1, (short) 500, (short) 650, (short) 7200, 200000, 0, false, "black");
         System.out.println("----------------------------------------------");
         System.out.println( blackToyotaSupra.getMileage()+ "km " + blackToyotaSupra.getCarName() + "'s price is USD$" + blackToyotaSupra.getPrice() + "-");
+        blackToyotaSupra.startElectricEcoEngine();
         blackToyotaSupra.startEngine();
         blackToyotaSupra.drive(1000);
         blackToyotaSupra.setPrice(150000);
         System.out.println( blackToyotaSupra.getMileage()+ "km " + blackToyotaSupra.getCarName() + "'s price is USD$" + blackToyotaSupra.getPrice() + "-");
         blackToyotaSupra.getDescription();
-
         System.out.println("----------------------------------------------");
+
+
+        // the following line wont work as car class was turned into abstract // UNCOMMENT TO TEST
+        // Car newCar = new Car("RodrigoAuto" ,(byte) 1, (short) 500, (short) 650, (short) 7200, 200000, 0, false, "black");
+
+
     }
 
 }

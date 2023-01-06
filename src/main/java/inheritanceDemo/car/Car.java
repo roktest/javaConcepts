@@ -2,7 +2,7 @@ package inheritanceDemo.car;
 
 import java.util.Random;
 
-public class Car {
+public abstract class Car {
 
     //to stop other classes to overwrite use private
     private byte numberOfSeats = 5;
@@ -47,9 +47,9 @@ public class Car {
         System.out.println("Created a " + color + " " + carName);
     }
 
-    public void startEngine(){
-        System.out.println("engine started");
-    }
+    // as this is abstract method should not have body
+    //public void startEngine(){System.out.println("engine started");}
+    public abstract void startEngine();
 
     public void getDescription(){
         System.out.println("A " + color + " " + carName);
