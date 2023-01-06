@@ -27,6 +27,11 @@ public class SwimmerCompetitor extends Athlete implements SwimmingInterface{
     }
 
     @Override
+    public void freeStyle(int distanceInMeters) {
+        System.out.println("swimming " + distanceInMeters + "m freestyle very fast");
+    }
+
+    @Override
     public void compete() {
         super.compete();
         freeStyle();
