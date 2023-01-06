@@ -63,6 +63,8 @@ public class AthleteApp {
 
         for (SwimmerCompetitor swimmerCompetitor: swimmerCompetitors) {
             swimmerCompetitor.compete();
+            swimmerCompetitor.freeStyle(100);
+            swimmerCompetitor.freeStyle(200);
             swimmerCompetitor.getBio();
             swimmerCompetitor.getBodyType();
             System.out.println();
