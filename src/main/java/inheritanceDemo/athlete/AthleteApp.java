@@ -20,8 +20,9 @@ public class AthleteApp {
 
         for (BasketBallPlayer basketBallPlayer : basketBallPlayers){
             // System.out.println(basketBallPlayer.name); // won't be allowed once the variables of the class are private
-            basketBallPlayer.playGame();
+            basketBallPlayer.compete();
             basketBallPlayer.getBio();
+            System.out.println(basketBallPlayer.getBodyType());
             System.out.println();
         }
 
@@ -41,10 +42,32 @@ public class AthleteApp {
         footballPlayers[3] = chris;
 
         for(FootballPlayer footballPlayer: footballPlayers){
-            footballPlayer.playGame();
+            footballPlayer.compete();
             footballPlayer.getBio();
+            System.out.println(footballPlayer.getBodyType());
             System.out.println();
         }
+
+        //String name, String nickName, int yearOfBirth, String team, int numberOfCompetitions, int finaPoints
+        SwimmerCompetitor paz = new SwimmerCompetitor("Maria Paz Deluca", "Paz", 1989, "Argentina", 450, 1246);
+        SwimmerCompetitor tito = new SwimmerCompetitor("Arnold Taz Deluta", "Tito", 2018, "Argentina", 5, 9999);
+        SwimmerCompetitor juani = new SwimmerCompetitor("Juana Katz", "Juani", 1980, "Argentina", 612, 5902);
+        SwimmerCompetitor pe = new SwimmerCompetitor("Pedro Katz", "Pe", 2000, "Argentina", 1827, 4123);
+
+        SwimmerCompetitor[] swimmerCompetitors = new SwimmerCompetitor[4];
+
+        swimmerCompetitors[0] = paz;
+        swimmerCompetitors[1] = tito;
+        swimmerCompetitors[2] = juani;
+        swimmerCompetitors[3] = pe;
+
+        for (SwimmerCompetitor swimmerCompetitor: swimmerCompetitors) {
+            swimmerCompetitor.compete();
+            swimmerCompetitor.getBio();
+            swimmerCompetitor.getBodyType();
+            System.out.println();
+        }
+
 
     }
 
