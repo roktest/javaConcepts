@@ -18,6 +18,11 @@ public class FootballPlayer extends Athlete{
         System.out.println("Passing Yards " + passingYards);
     }
 
+    @Override
+    public String getBodyType() {
+        return "Big muscles and endurance";
+    }
+
     public void increaseCompletions(int completions){
         this.completions = this.completions + completions;
     }

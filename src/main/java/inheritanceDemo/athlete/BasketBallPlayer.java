@@ -2,7 +2,7 @@ package inheritanceDemo.athlete;
 
 import java.util.Random;
 
-public class BasketBallPlayer extends Athlete{
+public class BasketBallPlayer extends Athlete {
 
     //to stop other classes to overwrite use private
     private double freeThrowPercentage;
@@ -35,8 +35,8 @@ public class BasketBallPlayer extends Athlete{
     }
 
     @Override
-    public void playGame(){
-        super.playGame();
+    public void compete(){
+        super.compete();
         freeThrow();
     }
 
@@ -46,6 +46,11 @@ public class BasketBallPlayer extends Athlete{
 
     public void setPointsPerGame(double pointsPerGame) {
         this.pointsPerGame = pointsPerGame;
+    }
+
+    @Override
+    public String getBodyType() {
+        return "Tall and lean muscle";
     }
 
 }

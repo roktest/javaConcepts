@@ -1,19 +1,19 @@
 package inheritanceDemo.athlete;
 
-public class Athlete {
+public abstract class Athlete {
     //to stop other classes to overwrite use private
     private String name;
     private String nickName;
     private int yearOfBirth;
     private String team;
-    private int gamesPlayed;
+    private int numberOfCompetitions;
 
-    public Athlete(String name, String nickName, int yearOfBirth, String team, int gamesPlayed) {
+    public Athlete(String name, String nickName, int yearOfBirth, String team, int numberOfCompetitions) {
         this.name = name;
         this.nickName = nickName;
         this.yearOfBirth = yearOfBirth;
         this.team = team;
-        this.gamesPlayed = gamesPlayed;
+        this.numberOfCompetitions = numberOfCompetitions;
     }
 
     public String getName() {
@@ -24,12 +24,12 @@ public class Athlete {
         System.out.println(name + " (" + nickName + ")");
         System.out.println("Born in " + yearOfBirth);
         System.out.println("Last Team " + team);
-        System.out.println("Games played " + gamesPlayed);
+        System.out.println("Took part in " + numberOfCompetitions + " competitions");
     }
 
-    public void playGame(){
-        System.out.println(name + " started a game.");
-        gamesPlayed++;
+    public void compete(){
+        System.out.println(name + " took part in a competition");
+        numberOfCompetitions++;
     }
 
     public String getTeam() {
@@ -39,4 +39,6 @@ public class Athlete {
     public void setTeam(String team) {
         this.team = team;
     }
+
+    public abstract String getBodyType();
 }
