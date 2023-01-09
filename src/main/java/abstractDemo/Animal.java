@@ -9,7 +9,6 @@ public abstract class Animal {
 
     int age;
     String name;
-    String breed;
 
     public abstract void wakeUp();
 
@@ -28,7 +27,7 @@ public abstract class Animal {
     public abstract void sleep();
 
     // Abstract classes can have non-abstract methods
-    public void printDogData(){
+    public void printDogData(String breed){
         System.out.println("I am " + name + ", a wild " + breed + " born in the jungle(?), and have "+ age + " years of dogging");
     }
 

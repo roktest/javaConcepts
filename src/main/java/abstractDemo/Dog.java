@@ -2,6 +2,8 @@ package abstractDemo;
 
 public class Dog extends Animal implements DomesticAnimalStuff{
 
+    private String breed;
+
     // implemented from abstract class Animal
     @Override
     public void wakeUp() {
@@ -69,6 +71,12 @@ public class Dog extends Animal implements DomesticAnimalStuff{
         System.out.println("Play with a bone toy");
     }
 
+    // getters and setters
+    public String getBreed() {
+        return breed;
+    }
 
-
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
 }

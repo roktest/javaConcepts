@@ -14,9 +14,9 @@ public class MainApp {
 
         dog.name = "Arnold Katz Deluca";
         dog.age = 5;
-        dog.breed = "Mini Schnauzer";
+        dog.setBreed("Mini Schnauzer");
 
-        dog.printDogData();
+        dog.printDogData(dog.getBreed());
         dog.wakeUp();
         dog.makeNoise();
         dog.brunch();
